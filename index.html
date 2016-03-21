@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<title>Etsy</title>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="topcolor">
+		<header>
+			
+			<img src="etsyLogo.jpg" width="auto" height="60px" />
+			<form>
+				<input type="text" name="search" placeholder="Search for items of shops" />
+				<input type="submit" value="Search"/>
+			</form>
+			<div class="topbar">
+				<a href="#">Sell on Etsy</a>
+				<a href="#">Register</a>
+				<a class="signin" href="#">Sign In</a>
+			</div>
+				<div class="cart">
+					<a href="#"><img src="assets/cart.png" width="25px" height="30px" /></a>
+					<span>Cart</span>
+				</div>
+			
+		</header>
+		<div class="border"></div>
+		<nav>
+			<a href="#">Clothing & Accessories</a>
+			<a href="#">Jewelry</a>
+			<a href="#">Craft Supplies & Tools</a>
+			<a href="#">Weddings</a>
+			<a href="#">Entertainment</a>
+			<a href="#">Home & Living</a>
+			<a href="#">Kids & Baby</a>
+			<a href="#">Vintage</a>
+		</nav>
+		<div class="border"></div>
+		</div>
+		<div class="toptwo">
+			<aside>
+				<h3>Show results for:</h3>
+				<ul>
+					<li><a href="#" class="category">All categories</a></li>
+					<li><a href="#">Home & Living</a></li>
+					<li><a href="#">Art & Collectibles</a></li>
+					<li><a href="#">Weddings</a></li>
+					<li><a href="#">Clothing</a></li>
+					<li><a href="#">Paper & Party Supplies</a></li>
+					<li><a href="#">Jewelry</a></li>
+					<li><a href="#">Accessories</a></li>
+					<li><a href="#">Craft Supplies & Tools</a></li>
+					<li><a href="#">Bags & Purses</a></li>
+					<li><a href="#">Bath & Beauty</a></li>
+					<li><a href="#">Shoes</a></li>
+					<li><a href="#">Books, Movies & Music</a></li>
+					<li><a href="#">Electronics & Accessories</a></li>
+					<li><a href="#">Toys & Games</a></li>
+					<li><a href="#">Pet Supplies</a></li>
+				</ul>
+			</aside>
+			<div class="categoryPics">
+				<h3>Top categories for "whiskey"</h3>
+				<div class="boxpics">
+					<img src="assets/a.jpg" width="345px" height="235px" />
+					<img src="assets/c.jpg" width="350px" height="235px" />
+					<img src="assets/b.jpg" width="227px" height="180px" />
+					<img src="assets/d.jpg" width="227px" height="180px" />
+					<img src="assets/e.jpg" width="237px" height="180px" />
+				</div>
+			</div>
+		</div>
+		
+		<aside class="lowerAside">
+			<h3>Refine your search</h3>
+		<div class="aside2color">
+			<ul class="itemtypes">
+				<li class="category">Item type</li>
+				<li><a href=""><input type="radio" checked/> All items</a></li>
+				<li><a href=""><input type="radio" /> Handmade</a></li>
+				<li><a href=""><input type="radio" /> Vintage</a></li>
+			</ul>
+			<h3>Price ($)</h3>
+			<form class="highToLow">
+				<input type="text" placeholder="Low" /><span> to </span><input type="text" placeholder="High" />
+				<input type="submit" value="▶"/>
+			</form>
+			<div class="colorwatch">
+				<h3>Filter by color</h3>
+				<div class="box box1"></div>
+				<div class="box box2"></div>
+				<div class="box box3"></div>
+				<div class="box box4"></div>
+				<div class="box box5"></div>
+				<div class="box box6"></div>
+				<div class="box box7"></div>
+				<div class="box box8"></div>
+			</div>
+			<ul>
+				<li class="category">Ordering Options</li>
+				<li><input type="checkbox"/> Accepts Etsy gift cards</li>
+				<li><input type="checkbox"/> Customizable</li>
+			</ul>
+			<ul>
+				<li class="category">Shop Location</li>
+				<li><input type="radio" checked/> Anywhere</li>
+				<li><input type="radio"/> United States</li>
+				<li><a href="#">Choose a custom location</a></li>
+			</ul>
+			<div>
+				<h3>Ship to</h3>
+				<select>
+					<option value="United States">United States</option>
+				</select>
+			</div>
+		</div>
+		</aside>
+
+
+
+
+
+		<div id="app"></div>
+		<script id="picTemplate" type="text">
+			
+			<div class="picGallery">
+	 		<h3>All categories<span style="color: black;"> "whiskey" ({{count}}) Results</span></h3>
+	 		
+				<div class="products">
+					{{#results}}
+					{{#Images}}
+					<div class="thumb">
+						
+						<img src="{{url_170x135}}" />
+					</div>
+					{{/Images}}
+					{{/results}}
+				</div>
+			</div>
+  		</script>	
+
+
+	</div>
+
+	<script   src="https://code.jquery.com/jquery-1.12.1.min.js"   integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I="   crossorigin="anonymous"></script>
+	<script src="js/mustache.min.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
